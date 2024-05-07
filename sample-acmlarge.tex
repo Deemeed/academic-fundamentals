@@ -1,4 +1,5 @@
 \documentclass[12pt]{acmart}
+%\documentclass[12pt]{volcanica-template}
 
 \usepackage[english]{babel}
 \usepackage{amsmath, amsfonts, amsthm}
@@ -96,10 +97,10 @@ The database preserves the invariant
 \subsection{Background}
 
 \begin{equation}
-    Precision = \frac{tp}{tp + fp'},
+    \int_{\mathbb{R}^n} \exp\left( -\frac{1}{2} x^T A x + b^T x \right) dx = \sqrt{\frac{(2\pi)^n}{\det A}} \exp\left( \frac{1}{2} b^T A^{-1} b \right),
     \text{where}
     \label{3}
-\end{equation}\\
+\end{equation}
 
 Precision - defined in Equation 1\par
     $tp$ - the number of $true$ positives identified by the model;\par
