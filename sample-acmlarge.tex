@@ -1,8 +1,8 @@
-%\documentclass[12pt]{acmart}
-\documentclass[12pt]{gji}
+\documentclass[12pt]{acmart}
+%\documentclass[12pt]{gji}
 
 \usepackage[english]{babel}
-\usepackage{amsmath, amsfonts, amsthm}
+\usepackage{amsmath, amsfonts}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{multicol}
@@ -40,9 +40,9 @@ We evaluate our methodology on three applications: a web administrator, a simple
 
 \subsubsection{Information}
 
-We introduce our approach on the example of a simple web service.The example is a translation from PHP with embedded SQL commands into SmpSL of code excerpts from the Panda web-administrator. The web service provides several services implemented in dedicated functions for subscribing a user to a newsletter, deleting a newsletter, making a user an admin of a newsletter, sending emails to all subscribed users of a newsletter, etc. We illustrate our verification methodology by exposing an error in the Panda web-administrator. The verification methodology we envision in this paper consists of Table \ref{tab1} maintaining database invariants and Figure \ref{pic1} verifying a contract specification for each function of the web service.
+We introduce our approach on the example of a simple web service.The example is a translation from PHP with embedded SQL commands into SmpSL of code excerpts from the Panda web-administrator. The web service provides several services implemented in dedicated functions for subscribing a user to a newsletter, deleting a newsletter, making a user an admin of a newsletter, sending emails to all subscribed users of a newsletter, etc. We illustrate our verification methodology by exposing an error in the Panda web-administrator. The verification methodology we envision in this paper consists of Table \ref{tab1} maintaining database invariants and Figure (\ref{pic1}) verifying a contract specification for each function of the web service.
 
-\begin{table}
+\begin{table}[H]
 \caption{Genetic algorithm parameters for simple login script}
     \begin{tabular}{|c|c|}
         \hline
@@ -73,7 +73,7 @@ We introduce our approach on the example of a simple web service.The example is 
     \label{pic1}
 \end{figure}
 
-The database contains several tables including $NS = NewsletterSubscription$ with at-butes nwl, user, subscrided and code. The database is a structure whose universe is partitioned into three sets: $domU, boolB, and codesB$. The attributes nwl and user range over the finite set $domU$  , the attribute subscribed ranges over $boolB =  (True, False)$ and the attribute code ranges over the fixed finite set $boolB$ . The superscripts in $domU, boolB, and codesB$ serve to indicate that the domain $domU$ is unbounded, while the Boolean domain and the domain of codes are bounded (i.e. of fixed finite size). When $s=true, (n,u,s,c )$ in $NS$ signifies that the user $u$ is subscribed to the newsletter $n$. The process of being (un)subscribed from/to a newsletter requires an intermediary confirmation step in which the confirm $code c$ plays a role. 
+The database contains several tables including $NS = NewsletterSubscription$ with at-butes nwl, user, subscrided and code. The database is a structure whose universe is partitioned into three sets: $domU, boolB, and codesB$. The attributes nwl and user range over the finite set $domU$  , the attribute subscribed ranges over $boolB =  (True, False)$ and the attribute code ranges over the fixed finite set $boolB$ . The superscripts in $domU, boolB$, and $codesB$ serve to indicate that the domain $domU$ is unbounded, while the Boolean domain and the domain of codes are bounded (i.e. of fixed finite size). When $s=true, (n,u,s,c )$ in $NS$ signifies that the user $u$ is subscribed to the newsletter $n$. The process of being (un)subscribed from/to a newsletter requires an intermediary confirmation step in which the confirm $code c$ plays a role. 
 
 \subsubsection{Example}
 
@@ -114,7 +114,7 @@ Precision - defined in Equation 1\par
     \item A binary relation name $R$ is interpreted in Figure \ref{pic2}.
 \end{itemize}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics{Picture2.jpg}
     \caption{PHP Script of Newspaper Display Script}
